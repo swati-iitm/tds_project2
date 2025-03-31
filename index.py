@@ -16,6 +16,9 @@ class Item(BaseModel):
     roll_no: int
     roe_marks: int
 
+@app.get("/")
+def read_root():
+    return {"message": "Hello, World!"}
 
 with open("question_mapper.json",'r') as f:
     question_mapper=json.load(f)
